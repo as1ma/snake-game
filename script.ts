@@ -86,13 +86,16 @@ function isGameOver(){
         ctx.fillStyle = "white"
         ctx.font = "50px monospace"
         ctx.fillText("GAME OVER", c.width / 4, c.height / 2)
+        setTimeout(resetGame,4000)
     }
+
     return gameOver
 }
 
-// function resetGame(){
-//     document.location.reload() 
-// }
+function resetGame(){
+    document.location.reload() 
+}
+
 function drawSnake(){
     ctx.fillStyle = "red"
     ctx.fillRect(headX * tileCount, headY*tileCount, tileSize, tileSize)
